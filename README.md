@@ -12,6 +12,13 @@ Each bot drafts. The human submits, publishes, signs, or commands.
 | x402 Marketplace Operator | Listing files for LVL / plugin / Grok Bot share | [x402-marketplace-operator-bot](https://github.com/omgawdmadeit1/x402-marketplace-operator-bot) | https://x.ai/bot/gC5Kmx6p0ALPtnN7W6Xou |
 | Tesla Fleet Oracle | Read-only Trek / XYO quest briefs | [tesla-fleet-oracle-bot](https://github.com/omgawdmadeit1/tesla-fleet-oracle-bot) | https://x.ai/bot/TC4HAdm7oBVo-oAouU8iw |
 
+
+## Posted
+
+Fleet thread (share links only, no GMV):
+- Root: https://x.com/OmgawdMadeit/status/2096127964668629458
+- Reply: https://x.com/OmgawdMadeit/status/2096129802956845555
+
 ## How to publish the next one
 
 1. Create the bot in Grok Bot.
