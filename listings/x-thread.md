@@ -1,12 +1,16 @@
-Three Grok Bots, one rule: they draft, you ship.
+Four Grok Bots. They draft. You ship.
 
-1) Grant Packet Assembler
+Grant Packet Assembler
 https://x.ai/bot/kbP2DWs6cKSWqeRtQhIef
 
-2) Music Video Release
-https://github.com/omgawdmadeit1/music-video-release-bot
+Music Video Release
+https://x.ai/bot/vagsUEIt5s7lexKnSes2H
 
-3) x402 Marketplace Operator
-https://github.com/omgawdmadeit1/x402-marketplace-operator-bot
+x402 Marketplace Operator
+https://x.ai/bot/gC5Kmx6p0ALPtnN7W6Xou
 
-Fleet index: https://github.com/omgawdmadeit1/grokbot-fleet
+Tesla Fleet Oracle (read-only — ask it to honk, it says BLOCKED)
+https://x.ai/bot/TC4HAdm7oBVo-oAouU8iw
+
+Fleet: https://github.com/omgawdmadeit1/grokbot-fleet
+Inspect instructions before you Add.
