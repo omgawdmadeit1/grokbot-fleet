@@ -5,4 +5,4 @@ Base: ZeroPointRepo/GrokBotDev main
 Head: omgawdmadeit1:add-georgia-grant-packet
 State: OPEN
 Files: 4 plugin listings, status proposed, no verified_at
-X permalink: PENDING
+X fleet thread: PENDING — not posted yet
