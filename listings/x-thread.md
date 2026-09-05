@@ -1,3 +1,12 @@
+# Fleet X thread (live)
+
+Root: https://x.com/OmgawdMadeit/status/2096127964668629458
+Reply: https://x.com/OmgawdMadeit/status/2096129802956845555
+
+Posted 2026-09-05 from @OmgawdMadeit. Share links only. No GMV. No escrow SKUs.
+
+---
+
 Four Grok Bots. They draft. You ship.
 
 Grant Packet Assembler
