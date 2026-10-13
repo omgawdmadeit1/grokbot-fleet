@@ -1,0 +1,397 @@
+{
+  "schema": "lvl-fleet-charter-v1",
+  "source": "/workspace/ecosystem/BLUEPRINT.md section (d), 2026-10-13",
+  "loops": [
+    {
+      "loop": "fleet-coordination",
+      "label": "Fleet coordination + approval queue to Joe",
+      "owner": {
+        "name": "Grokgod",
+        "agent_id": "39db2824-2025-4095-80c3-e5e2dfec3ee8"
+      },
+      "supporting": [
+        {
+          "name": "Lvl",
+          "agent_id": "5238754b-13ed-4bc6-a7c4-99533cbe0e3d"
+        }
+      ],
+      "notes": "No cash scoreboard (moved to Money)."
+    },
+    {
+      "loop": "cash-ledger",
+      "label": "Cash ledger / honest scoreboard, all rails",
+      "owner": {
+        "name": "Money",
+        "agent_id": "0104d62a-1806-4f41-b479-73991864a10d"
+      },
+      "supporting": [
+        {
+          "name": "Stripe Fulfill Desk",
+          "agent_id": "4110c0c2-eed5-4481-b8b9-ff43377242f1"
+        },
+        {
+          "name": "Whop Cash Desk",
+          "agent_id": "0e872243-6e32-4c16-ad90-b99983321b25"
+        },
+        {
+          "name": "Gumroad Desk",
+          "agent_id": "f9d5dee3-12ae-4867-9f7a-bbdad3cb33ab"
+        }
+      ],
+      "notes": "Uses control-room v1 classes live/test/self_funded; absorbs LVL Profit Operator's scoreboard."
+    },
+    {
+      "loop": "experiments",
+      "label": "Experiments + kill clocks",
+      "owner": {
+        "name": "LVL Profit Operator",
+        "agent_id": "82b16b0e-0d48-4557-bd36-f3da2fb490ac"
+      },
+      "supporting": [],
+      "notes": "Scope narrowed to experiments only."
+    },
+    {
+      "loop": "fulfillment",
+      "label": "Post-purchase fulfillment, all rails",
+      "owner": {
+        "name": "Buyer Success Desk",
+        "agent_id": "122140ba-fd43-4963-be8f-d194a07dc3c0"
+      },
+      "supporting": [
+        {
+          "name": "Stripe Fulfill Desk",
+          "agent_id": "4110c0c2-eed5-4481-b8b9-ff43377242f1"
+        },
+        {
+          "name": "Whop Cash Desk",
+          "agent_id": "0e872243-6e32-4c16-ad90-b99983321b25"
+        }
+      ],
+      "notes": "Uses lvlltd-agent-marketplace commerce/fulfillment.js; Stripe Fulfill and Whop Cash become rail monitors."
+    },
+    {
+      "loop": "catalog",
+      "label": "SKU registry / catalog",
+      "owner": {
+        "name": "Shopify Catalog Desk",
+        "agent_id": "253321d3-a554-4320-ae87-30741ab1c59f"
+      },
+      "supporting": [
+        {
+          "name": "A2A Catalog Desk",
+          "agent_id": "3e5e9f77-c90a-422e-821e-7123cfbcd1fc"
+        },
+        {
+          "name": "Skill Runtime Agent",
+          "agent_id": "b740598a-cf60-436d-800c-bf85a07035e8"
+        }
+      ],
+      "notes": "Renamed Catalog Desk; owns sku-race catalog/registry.json."
+    },
+    {
+      "loop": "merch",
+      "label": "Merch creation (Printify → Shopify/Etsy/Pop-Up)",
+      "owner": {
+        "name": "Shopify Store Lead",
+        "agent_id": "f178374f-3799-445b-8e09-b0ef9c7e2d0d"
+      },
+      "supporting": [
+        {
+          "name": "Shopify Ops Desk",
+          "agent_id": "af996f3a-2121-4dfe-9726-fe577d668090"
+        },
+        {
+          "name": "Shopify Growth Desk",
+          "agent_id": "1c289ff5-66dc-49b6-86a5-5715e7be674b"
+        },
+        {
+          "name": "Forge Operator",
+          "agent_id": "144a4838-9748-4dac-8a76-978a07d94bff"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "loop": "agent-marketplace",
+      "label": "lvlltd.com agent marketplace",
+      "owner": {
+        "name": "Agent Interface Agent",
+        "agent_id": "698d7922-182c-44f1-8a0a-09c01abf16a5"
+      },
+      "supporting": [
+        {
+          "name": "Skill Runtime Agent",
+          "agent_id": "b740598a-cf60-436d-800c-bf85a07035e8"
+        },
+        {
+          "name": "Market Engine Agent",
+          "agent_id": "da20ab60-7c2e-4fda-94c6-beb2b2c5dcc4"
+        },
+        {
+          "name": "Settlement And Fee Agent",
+          "agent_id": "6fa70101-4945-498f-ae7a-92654942d014"
+        },
+        {
+          "name": "x402 Marketplace Operator",
+          "agent_id": "941623d3-f3f3-46fe-80f8-4979d335e3ff"
+        }
+      ],
+      "notes": "Settlement owns x402 + the 3.3% fee."
+    },
+    {
+      "loop": "a2a-marketplace",
+      "label": "A2A marketplace",
+      "owner": {
+        "name": "A2A Market Lead",
+        "agent_id": "7b6a1407-a3bf-4149-b546-eaf8d7fbbe79"
+      },
+      "supporting": [
+        {
+          "name": "A2A Billing Desk",
+          "agent_id": "16ad89b0-278a-4b4f-abfe-c5f32c0d00bf"
+        },
+        {
+          "name": "A2A Catalog Desk",
+          "agent_id": "3e5e9f77-c90a-422e-821e-7123cfbcd1fc"
+        },
+        {
+          "name": "A2A Runtime Ops",
+          "agent_id": "54667f09-ca95-4eac-9a59-d9608ae9cd7f"
+        }
+      ],
+      "notes": "Folded under P3; lvlltd.com canonical."
+    },
+    {
+      "loop": "outbound-demand",
+      "label": "Outbound demand (one funnel)",
+      "owner": {
+        "name": "Outbound Sales Desk",
+        "agent_id": "05f763ef-e917-4604-bc49-c6de924f22a2"
+      },
+      "supporting": [
+        {
+          "name": "Cash Closer Desk",
+          "agent_id": "44feb519-f987-4018-a14d-4192a4b05275"
+        },
+        {
+          "name": "Affiliate Desk",
+          "agent_id": "ca9bbfbf-5dbc-4d13-90fe-8d8ce44eff33"
+        },
+        {
+          "name": "Creator Partners Desk",
+          "agent_id": "d5bf0474-5128-4dde-9bfd-6260493c1678"
+        },
+        {
+          "name": "Agency Commission Desk",
+          "agent_id": "240f1135-6ef7-4424-bdcf-45a2e3b240d0"
+        },
+        {
+          "name": "Placement Media Desk",
+          "agent_id": "8b686bdf-e55c-4cb7-a13c-5afe86098880"
+        },
+        {
+          "name": "B2B Pilot Desk",
+          "agent_id": "dba58660-d676-499f-9ce4-0d6e6b9157bd"
+        },
+        {
+          "name": "A2A Demand Scout",
+          "agent_id": "20a1f71b-1936-4963-ae52-79178acbee1a"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "loop": "social",
+      "label": "Social publishing",
+      "owner": {
+        "name": "XPulse",
+        "agent_id": "bb65ae09-79b3-4055-b5bc-77d9e4c7a5c7"
+      },
+      "supporting": [
+        {
+          "name": "LinkedIn Desk",
+          "agent_id": "be6139ba-7ada-4478-bd80-2b9dc7c5e4f9"
+        },
+        {
+          "name": "LVL Discord Hub",
+          "agent_id": "f92f6869-7074-479f-9472-318bef55af5b"
+        },
+        {
+          "name": "Shopify Growth Desk",
+          "agent_id": "1c289ff5-66dc-49b6-86a5-5715e7be674b"
+        }
+      ],
+      "notes": "Everything stays a draft until Joe says GO."
+    },
+    {
+      "loop": "code",
+      "label": "Code changes",
+      "owner": {
+        "name": "Repo Patch",
+        "agent_id": "7f29a82e-860e-4967-8032-259a9f8f78b2"
+      },
+      "supporting": [],
+      "notes": "PR-only."
+    },
+    {
+      "loop": "infra",
+      "label": "Infra / AWS forge",
+      "owner": {
+        "name": "Forge Operator",
+        "agent_id": "144a4838-9748-4dac-8a76-978a07d94bff"
+      },
+      "supporting": [],
+      "notes": ""
+    },
+    {
+      "loop": "inbox",
+      "label": "Inbox",
+      "owner": {
+        "name": "Inbox Sovereign",
+        "agent_id": "9e3a5ebb-d2d0-4438-a4d7-12ad63474b1c"
+      },
+      "supporting": [],
+      "notes": "Draft-only."
+    },
+    {
+      "loop": "funding",
+      "label": "Funding",
+      "owner": {
+        "name": "Funding Lead",
+        "agent_id": "98bf3f1c-d71a-47ab-8001-34fd2790c5ff"
+      },
+      "supporting": [
+        {
+          "name": "Grants Desk",
+          "agent_id": "9b1756ca-557e-40cc-915f-be7b3f2649a5"
+        },
+        {
+          "name": "SBDC Desk",
+          "agent_id": "9045585a-1a46-4c53-a33d-eb5df2e5bbe3"
+        },
+        {
+          "name": "Boardy Network Desk",
+          "agent_id": "612d38f9-788b-4697-aeeb-d831996ff604"
+        },
+        {
+          "name": "Boardy Deal Hunter",
+          "agent_id": "592d89fe-050b-4d3f-9dc5-60f35648d9ef"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "loop": "marketplaces-noncore",
+      "label": "Freelance marketplaces (non-core)",
+      "owner": {
+        "name": "Dealwork Desk",
+        "agent_id": "6671aa8a-fef3-43e9-9ead-7d7df9fc5458"
+      },
+      "supporting": [
+        {
+          "name": "OpenTask Desk",
+          "agent_id": "2a87885c-2d20-4d67-b520-818bcffb67a6"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "loop": "sideshot-noncore",
+      "label": "Sideshot (non-core)",
+      "owner": {
+        "name": "Sideshot Beverage Founder",
+        "agent_id": "9949b9e9-6771-4316-a467-0e328a765e00"
+      },
+      "supporting": [],
+      "notes": ""
+    },
+    {
+      "loop": "tesla-briefs",
+      "label": "Tesla fleet briefs (read-only)",
+      "owner": {
+        "name": "Tesla Fleet Oracle",
+        "agent_id": "a3142f5b-33e2-4e9a-97ed-bcd54301df34"
+      },
+      "supporting": [],
+      "notes": "Must not write."
+    }
+  ],
+  "unowned": [
+    {
+      "loop": "music",
+      "label": "Music (P1)",
+      "proposal": "new Studio Desk, or extend XPulse + music-video-release-bot",
+      "needs": "Joseph decision"
+    },
+    {
+      "loop": "tr3k-build",
+      "label": "Tr3k build (P4)",
+      "proposal": "Repo Patch builds; Tesla Fleet Oracle stays read-only",
+      "needs": "Joseph decision"
+    },
+    {
+      "loop": "etsy",
+      "label": "Etsy",
+      "proposal": "Shopify Store Lead after Joseph confirms account access",
+      "needs": "Joseph decision"
+    }
+  ],
+  "retire_proposed": [
+    {
+      "name": "$",
+      "agent_id": "af56187f-5241-432a-9b4d-81115dca2b2b",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "A2A Marketplace",
+      "agent_id": "de8a2111-1223-42ff-94b5-c166cfb05bb6",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "Boardy Deals",
+      "agent_id": "12598ab9-4b9f-4eb8-96bb-18a0a2d71552",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "Cash Conversion",
+      "agent_id": "511ed8f6-0e09-442a-9f18-c2aaf7d30611",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "Demand Pipeline",
+      "agent_id": "d71d3bd1-8567-4094-905e-eeb3369bdb25",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "Funding",
+      "agent_id": "b7b7cf94-a192-43e6-9f37-e77d4a2cb26d",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "Sales & Affiliates",
+      "agent_id": "00b6f341-c1cf-4ffe-806e-99487f0be1e6",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    },
+    {
+      "name": "Shopify Launch",
+      "agent_id": "7a39b35b-e0fa-418c-8074-cd1a7b03d211",
+      "status": "proposed_retire_not_deleted",
+      "reason": "blank stub (no description/instructions)",
+      "deletion_needs": "Joseph approval"
+    }
+  ]
+}
